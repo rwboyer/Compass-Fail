@@ -1,0 +1,39 @@
+@import blueprint/reset.sass
+@import partials/base.sass
+@import blueprint
+@import blueprint/modules/scaffolding.sass
+@import compass/utilities.sass
+@import compass/misc.sass
+
++blueprint
+
+//Recommended Blueprint configuration with scoping and semantic layout:
++blueprint-typography
++blueprint-scaffolding
+
+#container
+	+container
+
+#header
+	+column(24)
+	
+#header
+	#outside
+		float: right
+		display: inline-block
+		+horizontal-list
+		+no-bullets
+
+#sidebar
+	+column(5)
+
+#content
+	+column(19)
+	+last
+
+#footer
+	+column(24)
+
+#unobtrusive
+	float: right
+	+unobtrusive-logo(1.5em)
