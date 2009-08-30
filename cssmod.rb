@@ -1,6 +1,6 @@
 #Rack version of the testbed
 
-%w( rubygems sinatra/base compass ).each {|f| require f}
+%w( rubygems haml compass sinatra/base ).each {|f| require f}
 
 module CSSmod
 
@@ -17,9 +17,12 @@ module CSSmod
 		#Viola a dynamically rendered sass stylesheet using compass mixins
 		#	from blueprint
 		#	amazing
+		#get "/stylesheets/screen.css" do
 		get "/stylesheets/screen.css" do
+			puts Compass.sass_engine_options.inspect
+
 			content_type 'text/css'
-			sass :"stylesheets/screen", :sass => Compass.sass_engine_options
+			sass :"stylesheets/screen", Compass.sass_engine_options
 		end
 
 		get "/" do

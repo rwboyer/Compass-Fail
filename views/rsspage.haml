@@ -1,0 +1,32 @@
+%body#HAML
+	%div#container
+		%div#header
+			%h1 Ruby | Rack | Haml | SASS
+			%ul#outside
+				%li 
+					%a{:title => 'Photo', :href => 'http://photo.rwboyer.com'} Photo
+				%li 
+					%a{:title => 'Haml', :href => 'http://haml-lang.com'} Haml
+				%li 
+					%a{:title => 'SASS', :href => 'http://sass-lang.com'} SASS
+				%li 
+					%a{:title => 'SASS', :href => 'http://compass-style.org'} Compass
+		%div#sidebar
+			%h2 Sidebar
+			%ul
+				%li Just some junk
+				%li Some more junk
+				%li Even more
+			Outside stuff still in div id sidebar
+		%div#content
+			%h2 Welcome to HAML SASS and Compass
+			- @posts.each do |p|
+				%p= p
+			%p Here is all the crap and other crap that comes in the content section and all of that sutff should be in a div with an id of content.
+
+		%div#footer
+			%div#unobtrusive 
+				%span.selector Un
+				%span.brace {
+				%span.rule ob:tru-sive;
+				%span.brace }
