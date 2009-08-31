@@ -37,6 +37,6 @@ get "/dorss" do
 end
 
 get "/" do
-	haml :index
+	haml :content_part
 end
 

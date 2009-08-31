@@ -5,5 +5,7 @@ require File.join(File.dirname(__FILE__), 'cssmod.rb')
 disable :run
 
 map "/tiny" do
-	run CSSmod::TinyApp
+	map "/" do
+		run CSSmod::TinyApp
+	end
 end
