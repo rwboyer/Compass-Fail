@@ -17,7 +17,6 @@ module CSSmod
 		#Viola a dynamically rendered sass stylesheet using compass mixins
 		#	from blueprint
 		#	amazing
-		#get "/stylesheets/screen.css" do
 		#
 		get "/stylesheets/screen.css" do
 			puts Compass.sass_engine_options.inspect
