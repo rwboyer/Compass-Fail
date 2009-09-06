@@ -15,7 +15,7 @@
 					%li 
 						%a{:title => 'SASS', :href => 'http://sass-lang.com'} SASS
 					%li 
-						%a.rpxnow{:title => 'Login', :onclick => 'return false;', :href => 'https://compassfail.rpxnow.com/openid/v2/signin?token_url=http://192.168.1.101:4567/login'} Login
+						= render_login_logout
 				%hr
 				%h2.quiet
 					%em The source for all things Haml, Sass, Rack, and Ruby...
