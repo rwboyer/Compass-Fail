@@ -15,7 +15,7 @@
 					%li 
 						%a{:title => 'SASS', :href => 'http://sass-lang.com'} SASS
 					%li 
-						%a{:title => 'SASS', :href => 'http://compass-style.org'} Compass
+						%a.rpxnow{:title => 'Login', :onclick => 'return false;', :href => 'https://compassfail.rpxnow.com/openid/v2/signin?token_url=http://192.168.1.101:4567/login'} Login
 				%hr
 				%h2.quiet
 					%em The source for all things Haml, Sass, Rack, and Ruby...
@@ -23,3 +23,8 @@
 			= yield
 			= haml :sidebar_part, :layout => false
 			= haml :footer_part, :layout => false
+	%script{ :src => 'https://rpxnow.com/openid/v2/widget', :type => 'text/javascript'}
+	%script{ :type => 'text/javascript' }
+		RPXNOW.overlay = true;
+		RPXNOW.language_preference = 'en';
+
