@@ -28,7 +28,8 @@ end
 
 get "/dorss" do
 	resp = RestClient.get 'http://photo.rwboyer.com/feed/'
-	doc, @posts = Hpricot::XML(resp), [] 
+	puts resp.class
+	doc, @posts = Hpricot.XML(resp.to_s), [] 
 	(doc/:description).each do |p|
 		content = p.inner_html.gsub!(/\<\!\[CDATA\[(.*)\]\]\>/m, '\1')
 		@posts << content
